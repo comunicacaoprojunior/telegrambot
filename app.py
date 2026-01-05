@@ -26,6 +26,7 @@ async def umbrella(update: Update, context: ContextTypes.DEFAULT_TYPE):
 def main():
     app = Application.builder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
+    app.add_handler(CommandHandler("umbrella", umbrella))
 
     webhook_url = f"{WEBHOOK_BASE_URL}/{WEBHOOK_SECRET}"
 
@@ -38,5 +39,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
