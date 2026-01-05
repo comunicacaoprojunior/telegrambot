@@ -59,10 +59,10 @@ async def carute(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("CARUTÊ Ê Ê🗿🥀🍷")
     await asyncio.sleep(1)
     await update.message.reply_photo(
-        photo="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/refs/heads/main/assets/rihanna.jpg")
+        photo="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/refs/heads/main/assets/carute.png")
     await asyncio.sleep(1)
     await update.message.reply_photo(
-        photo="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/refs/heads/main/assets/rihanna.jpg")
+        photo="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/refs/heads/main/assets/aura.jpg")
     
 def main():
     app = Application.builder().token(TOKEN).build()
@@ -82,6 +82,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
