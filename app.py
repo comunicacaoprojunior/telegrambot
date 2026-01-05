@@ -41,13 +41,35 @@ async def caveirao(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("A PRO JUNIOR CHEGOUUU🔥🔥🔥 - DJ CARLOS!")
     await asyncio.sleep(1)
     await update.message.reply_animation(
-    animation="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif")
+    animation="https://github.com/comunicacaoprojunior/telegrambot/blob/main/assets/Caveirao.gif?raw=true")
+
+async def carute(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("carutê...🍷🥀")
+    await asyncio.sleep(1)
+    await update.message.reply_text("ca ca ca ca ca🗿")
+    await asyncio.sleep(1)
+    await update.message.reply_text("ca carutê... tê.. tê..🍷")
+    await asyncio.sleep(1)
+    await update.message.reply_text("carutê🥀")
+    await asyncio.sleep(1)
+    await update.message.reply_text("...")
+    await asyncio.sleep(1)
+    await update.message.reply_text("la vida, la vida es un CARUTÊ TÊ TÊ☠️☠️☠️")
+    await asyncio.sleep(1)
+    await update.message.reply_text("CARUTÊ Ê Ê🗿🥀🍷")
+    await asyncio.sleep(1)
+    await update.message.reply_photo(
+        photo="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/refs/heads/main/assets/rihanna.jpg")
+    await asyncio.sleep(1)
+    await update.message.reply_photo(
+        photo="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/refs/heads/main/assets/rihanna.jpg")
     
 def main():
     app = Application.builder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("umbrella", umbrella))
     app.add_handler(CommandHandler("caveirao", caveirao))
+    app.add_handler(CommandHandler("carute", carute))
 
     webhook_url = f"{WEBHOOK_BASE_URL}/{WEBHOOK_SECRET}"
 
@@ -60,6 +82,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
