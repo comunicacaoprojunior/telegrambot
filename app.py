@@ -41,7 +41,7 @@ async def caveirao(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("A PRO JUNIOR CHEGOUUU🔥🔥🔥")
     await asyncio.sleep(1)
     await update.message.reply_animation(
-    animation="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/main/assets/Caveirao.gif")
+    animation="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/main/assets/cavevideo.mp4")
 
 async def carute(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("carutê...🍷🥀")
@@ -82,6 +82,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
