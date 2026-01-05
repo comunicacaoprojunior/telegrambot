@@ -1,29 +1,27 @@
 import os
 from telegram import Update
 from telegram.ext import Application, CommandHandler, ContextTypes
+import asyncio
 
 TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 WEBHOOK_BASE_URL = os.getenv("WEBHOOK_BASE_URL")
 WEBHOOK_SECRET = os.getenv("WEBHOOK_SECRET", "webhook")
 PORT = int(os.getenv("PORT", "10000"))
 
-COMMANDS = {
-    "regras": [
-        "📌 Regras do grupo",
-        "1) Seja respeitoso",
-        "2) Sem spam",
-        "3) Use os comandos do bot",
-    ],
-    "umbrella": [
-        "BECAAAAAAUSE",
-        "WHEN THE SUN SHINE WE SHINE TOGETHER",
-        "YOU CAN STAND UNDER MY UMBRELLA ELLA ELLA ☂️☂️☂️",
-        "💧☂️ Ê Ê Ê ☂️💧",
-    ],
-}
-
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Eai, MC Carlinhos 2.0 na área!! Bom e novo, 100% atualizado!")
+
+async def umbrella(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("BECAAAAAAUSE🎤🎤🎤")
+    await asyncio.sleep(1)
+    await update.message.reply_text("WHEN THE SUN SHINE WE SHINE TOGETHER🌟")
+    await asyncio.sleep(1)
+    await update.message.reply_text("YOU CAN STAND UNDER MY UMBRELLA ELLA ELLA ☂️☂️☂️")
+    await asyncio.sleep(1)
+    await update.message.reply_text("💧☂️ Ê Ê Ê ☂️💧")
+    await asyncio.sleep(1)
+    await update.message.reply_photo(
+        photo="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/refs/heads/main/assets/rihanna.jpg")
 
 def main():
     app = Application.builder().token(TOKEN).build()
@@ -40,4 +38,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
