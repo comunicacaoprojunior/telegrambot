@@ -23,10 +23,31 @@ async def umbrella(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_photo(
         photo="https://raw.githubusercontent.com/comunicacaoprojunior/telegrambot/refs/heads/main/assets/rihanna.jpg")
 
+async def caveirao(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    await update.message.reply_text("caveirão...")
+    await asyncio.sleep(1)
+    await update.message.reply_text("...")
+    await asyncio.sleep(1)
+    await update.message.reply_text("caveirão...")
+    await asyncio.sleep(1)
+    await update.message.reply_text("cave cave")
+    await asyncio.sleep(1)
+    await update.message.reply_text("cave caveirão...")
+    await asyncio.sleep(1)
+    await update.message.reply_text("caveirão...")
+    await asyncio.sleep(1)
+    await update.message.reply_text("A PRO JUNIOR CHEGOUUUUUU😎🔥")
+    await asyncio.sleep(1)
+    await update.message.reply_text("A PRO JUNIOR CHEGOUUU🔥🔥🔥 - DJ CARLOS!")
+    await asyncio.sleep(1)
+    await update.message.reply_animation(
+    animation="https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif")
+    
 def main():
     app = Application.builder().token(TOKEN).build()
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("umbrella", umbrella))
+    app.add_handler(CommandHandler("caveirao", caveirao))
 
     webhook_url = f"{WEBHOOK_BASE_URL}/{WEBHOOK_SECRET}"
 
@@ -39,6 +60,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 
 
 
